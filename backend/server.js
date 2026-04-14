@@ -16,7 +16,7 @@ app.use(cors());
 app.use(express.json());
 
 // ✅ MongoDB Connection (plus robuste)
-mongoose.connect(process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/idea-vault')
+mongoose.connect(process.env.MONGO_URI || 'mongodb://mongo:27017/idea-vault')
   .then(() => console.log('✅ MongoDB connecté'))
   .catch(err => {
     console.error('❌ Erreur MongoDB:', err);
